@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="head_container">
+			<div class="heading">
+				<h1 id="h">REGISTRATION FORM</h1>
+			</div>
+			<img src="sources/head_img.png" alt="" class="head_img">
+			<div class="head_transperant_cl"></div>
+		</div> 
+		<!-- name_check(); mail_check(); education_check(); designation_check(); state_check(); country_check() -->
+		<form autocomplete="off" id="form" onsubmit="event.preventDefault();">
+			<div class="form_main_cont">
+				<div class="form_content">
+					<div class="form_det">
+						<div class="c_name_field">
+							<label for="name" class="c_name">Name<span> *</span></label>
+							<input type="text" name="name" id="name_ip" minlength="2" maxlength="50" placeholder="Your full name" onkeyup="name_check()" required>
+						</div>
+						<div class="c_dob_field">
+							<label for="dob" class="c_dob">Date of birth<span> *</span></label>
+							<input type="date" name="dob" id="dob_ip" required>
+						</div>
+						<div class="c_mail_field">
+							<label for="mail" class="c_mail">Email<span> *</span></label>
+							<input type="email" name="mail" id="mail_ip" onkeyup="mail_check()" placeholder="name123@gmail.com" required>
+						</div>
+						<div class="c_contact_field">
+							<label for="contact" class="c_contact">Contact Number<span> *</span></label>
+							<input type="number" name="contact" id="contact_ip">
+						</div>
+						<div class="c_gender_field">
+							<label for="gen" class="c_gender">Gender<span> *</span></label>
+							<ul>
+								<li><input type="radio" name="gen" id="male_ip" value="Male">Male</li>
+								<li><input type="radio" name="gen" id="female_ip" value="Female">Female</li>
+							</ul>
+						</div>
+						<div id="c_edu_field" class="c_edu_field">
+							<label for="education" id="c_edu" class="c_edu">Educational Qualification<span> *</span></label>
+							<input type="text" name="education" id="edu_ip" onkeyup="education_check()" required>
+						</div>
+						<div class="c_soc_med_url_field">
+							<label for="soc_url" class="c_soc_med_url">Social Media URL</label>
+							<input type="url" name="soc_url" id="soc_url_ip">
+						</div>
+
+						<div class="c_desig_field">
+							<label for="" class="c_desig">Designation<span> *</span></label>
+							<input type="text" id="desig_ip" onkeyup="designation_check()" placeholder="Student/ Professional">
+							<div class="dd_field" onclick="dd_open()">
+								<img id="dd"  src="sources/dropdown_icon.svg" alt="">
+							</div>
+							<ul id="desi_dd">
+								<li class="d" id="student" value="Student">Student</li>
+								<li class="d" id="professional" value="Professional">Professional</li>
+							</ul>
+						</div>
+						
+						<div class="c_add_field">
+							<label for="" class="c_add">Address<span> *</span></label>
+							<address>
+								<input id="add_1" type="text" placeholder="Door No. & Street Name">
+								<input id="add_2" type="text" placeholder="Street Name">
+								<input id="add_3" type="text" placeholder="City">
+								<input id="add_4" type="text" placeholder="State" onkeyup="state_check()">
+								<input id="add_5" type="text" placeholder="Country" onkeyup="country_check()">
+							</address>
+						</div>
+					</div>
+					
+					<div class="c_confirm_field">
+						<input type="checkbox" name="" id="check_box">
+						<label for="" class="c_confirm_url"><p>Click this box to receive notifications for the updates in future.</p></label>
+					</div>
+					
+					<div class="sub_field">
+						<div class="cancel" id="cancel" onmouseout="hov(this)" onclick="clear_form()">Cancel</div>
+						<div class="submit">
+							<input type="submit" id="submit" value="Submit" onmouseout="hov(this)">
+						</div>
+					</div>
+				</div>
+				<div class="brand_det">
+					<img class="samp_img" src="sources/samp_img.svg" alt="">
+					<p>Register to KickStart your career</p>
+					<a href="output.html" class="arrow_field" onmouseout="hov(this)">
+						<img class="arrow" src="sources/arrow.svg" alt="">
+					</a>
+				</div>
+			</div>
+		</form>
+	</div>
+
+	<script src="script.js"></script>
+	<!-- <script type="module" src="edit.js"></script> -->
+</body>
+</html>

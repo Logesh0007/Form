@@ -1,0 +1,66 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registered users</title>
+    <link rel="stylesheet" href="output_style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="head_container">
+            <div class="heading">
+                <h1 id="h">REGISTERED USERS</h1>
+            </div>
+            <img src="sources/head_img.png" alt="" class="head_img">
+            <div class="head_transperant_cl"></div>
+            <a title="click to edit the details" class="edit_field" id="edit_field" onclick="edi_o()" onmouseout="hov(this)">edit</a>
+        </div>
+
+        <section id="out_table" class="out_table">
+            <div class="tb">
+                <a href="index.html" class="left_arrow" onmouseout="hov(this)">
+                    <img id="left_arrow" src="sources/arrow.svg" alt="">
+                </a>
+                <div class="tb_content">
+                    <table id="table">
+                        <thead>
+                            <tr class="tr_1">
+                                <th id="th_1" width="80px">S.No</th>
+                                <th id="th_2" width="180px">Name</th>
+                                <th id="th_3" width="150px">Date of birth</th>
+                                <th id="th_4" width="80px">Age</th>
+                                <th id="th_5" width="270px">Email</th>
+                                <th id="th_6" width="150px">Contact number</th>
+                                <th id="th_7" width="100px">Gender</th>
+                                <th id="th_8" width="120px">Education</th>
+                                <th id="th_9" width="150px">Designation</th>
+                                <th id="th_10" width="170px">Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="verify_area" id="verify_area">
+        <div class="verify" id="verify">
+            <label>Enter the serial number</label>
+            <input type="number" class="verify_ip" id="verify_ip" onkeyup="ch_ip()">
+            <div class="btns">
+                <a id="edit_page_open"><button class="sub" id="sub" onclick="check_ip()">Ok</button></a>
+                <button class="can" id="can" onclick="close_verify()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+	<script src="output_script.js"></script>
+	<!-- <script type="module" src="edit.js"></script> -->
+
+</body>
+</html>
